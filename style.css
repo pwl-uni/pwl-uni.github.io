@@ -1,0 +1,68 @@
+:root {
+  --paper: #faf8f4;
+  --ink: #1d1c1a;
+  --soft: #6b6862;
+  --rule: #dcd7cd;
+  --link: #1d1c1a;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 19px/1.6 "EB Garamond", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+a:hover { text-decoration-color: var(--ink); }
+
+header.site, main, footer { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+header.site {
+  display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px;
+  padding-top: 32px; padding-bottom: 32px;
+}
+header.site .name { text-decoration: none; letter-spacing: .04em; font-variant: small-caps; font-size: 20px; }
+header.site nav { display: flex; gap: 22px; font-size: 17px; }
+header.site nav a { text-decoration: none; color: var(--soft); }
+header.site nav a:hover { color: var(--ink); }
+
+.intro { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; padding: 24px 0 48px; }
+h1 { font-weight: 400; font-size: 40px; line-height: 1.1; margin: 4px 0 6px; letter-spacing: .01em; }
+.role { color: var(--soft); font-style: italic; margin: 0 0 20px; }
+.intro p { margin: 0 0 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 22px !important; font-size: 17px; }
+
+.sketch { margin: 0; }
+.sketch img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+.sketch.wide { max-width: 420px; margin: 8px auto 56px; opacity: .92; }
+
+section { padding: 8px 0 40px; }
+h2 {
+  font-weight: 400; font-size: 15px; letter-spacing: .18em; text-transform: uppercase; color: var(--soft);
+  margin: 0 0 24px; padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+}
+h3 { font-weight: 400; font-style: italic; font-size: 20px; margin: 28px 0 12px; }
+
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pubs li { display: grid; grid-template-columns: 72px 1fr; column-gap: 12px; margin-bottom: 14px; }
+.pubs .yr { color: var(--soft); font-variant-numeric: oldstyle-nums; grid-row: span 2; }
+.pubs .t { line-height: 1.4; }
+.pubs .v { color: var(--soft); font-size: 17px; }
+.pubs.compact li { margin-bottom: 8px; }
+.note { color: var(--soft); font-size: 17px; margin-top: 16px; }
+
+footer { padding-top: 24px; padding-bottom: 48px; color: var(--soft); font-size: 15px; border-top: 1px solid var(--rule); }
+
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .intro { grid-template-columns: 1fr; gap: 20px; }
+  .sketch.portrait { max-width: 220px; }
+  h1 { font-size: 34px; }
+  .pubs li { grid-template-columns: 56px 1fr; }
+}

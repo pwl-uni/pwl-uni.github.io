@@ -22,6 +22,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<!-- MOURNING (auto-expires after 11 Nov 2026) - safe to delete afterwards -->
+<script>
+  if (new Date() < new Date('2026-11-12T00:00:00+01:00')) {
+    document.documentElement.classList.add('mourning');
+    document.addEventListener('DOMContentLoaded', function () {
+      var b = document.createElement('div');
+      b.className = 'mourning-bar';
+      b.textContent = document.documentElement.lang === 'pl'
+        ? 'Żałoba po ofiarach zamachu w Krakowie z 7 listopada.'
+        : 'In mourning for the victims of the attack in Kraków on 7 November.';
+      document.body.prepend(b);
+    });
+  }
+</script>
+<style>
+  html.mourning { filter: grayscale(100%); }
+  .mourning-bar { background:#111; color:#fff; text-align:center; padding:.5rem 1rem; font-size:.95rem; }
+</style>
+<!-- /MOURNING -->
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
